@@ -8,10 +8,10 @@ import java.util.Locale;
  * Created by Songezo on 2016-12-09.
  */
 public class MedicalHistory {
-    private Long id;
+    private long id;
     private Date date;
-    private Long task;
-    private Long comments;
+    private long task;
+    private long comments;
 
     public MedicalHistory(Builder builderObjt){
         id = builderObjt.id;
@@ -20,7 +20,7 @@ public class MedicalHistory {
         comments = builderObjt.comments;
     }
 
-    public MedicalHistory(Date date, Long task, Long comments, Long id){
+    public MedicalHistory(Date date, long task, long comments, long id){
         this.id = id;
         this.date = date;
         this.task = task;
@@ -31,15 +31,15 @@ public class MedicalHistory {
         return date;
     }
 
-    public Long getTask() {
+    public long getTask() {
         return task;
     }
 
-    public Long getComments() {
+    public long getComments() {
         return comments;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
@@ -47,27 +47,27 @@ public class MedicalHistory {
     }
 
     public static class Builder{
-        private Long id;
+        private long id;
         private Date date;
-        private Long task;
-        private Long comments;
+        private long task;
+        private long comments;
 
         public Builder date(Date date){
             this.date = date;
             return this;
         }
 
-        public Builder task(Long task){
+        public Builder task(long task){
             this.task = task;
             return this;
         }
 
-        public Builder comments(Long comments){
+        public Builder comments(long comments){
             this.comments = comments;
             return this;
         }
 
-        public Builder id(Long id){
+        public Builder id(long id){
             this.id = id;
             return this;
         }
