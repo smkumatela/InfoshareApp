@@ -9,6 +9,7 @@ public class ToDo {
     private long task;
     private boolean done;
     private long commentSection;
+    //private TaskTable taskTable;
 
     public ToDo(Builder builderObj){
         id = builderObj.id;

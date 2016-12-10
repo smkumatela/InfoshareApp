@@ -14,6 +14,11 @@ public class Patient {
     private long language;
     private int telephone;
     private boolean gender;
+    private MedicalHistory medicalHistory;
+    private ToDo toDo;
+    //private PatientProfileTable patientProfile;
+    //private GenerateReport generateReport;
+    //private Diagnosis diagnosis;
 
     public Patient(Builder builderObj){
         id = builderObj.id;
@@ -24,9 +29,11 @@ public class Patient {
         language = builderObj.language;
         telephone = builderObj.telephone;
         gender = builderObj.gender;
+        medicalHistory = builderObj.medicalHistory;
+        toDo = builderObj.toDo;
     }
 
-    public Patient(long id, long name, long address, long reasonForVisit, Date dateOfBirth, long language, int telephone, boolean gender) {
+    public Patient(long id, long name, long address, long reasonForVisit, Date dateOfBirth, long language, int telephone, boolean gender, MedicalHistory medicalHistory, ToDo toDo) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -35,6 +42,8 @@ public class Patient {
         this.language = language;
         this.telephone = telephone;
         this.gender = gender;
+        this.medicalHistory = medicalHistory;
+        this.toDo = toDo;
     }
 
     public long getId() {
@@ -69,6 +78,14 @@ public class Patient {
         return gender;
     }
 
+    public MedicalHistory getMedicalHistory() {
+        return medicalHistory;
+    }
+
+    public ToDo getToDo() {
+        return toDo;
+    }
+
     public Patient() {
     }
 
@@ -81,6 +98,8 @@ public class Patient {
         private long language;
         private int telephone;
         private boolean gender;
+        private MedicalHistory medicalHistory;
+        private ToDo toDo;
 
         public Builder id(long id){
             this.id = id;
@@ -122,6 +141,16 @@ public class Patient {
             return this;
         }
 
+        public Builder medicalHistory(MedicalHistory medicalHistory){
+            this.medicalHistory = medicalHistory;
+            return this;
+        }
+
+        public Builder toDo(ToDo toDo){
+            this.toDo = toDo;
+            return this;
+        }
+
         public Builder copyObj(Patient patientObj){
             this.id = patientObj.getId();
             this.name = patientObj.getName();
@@ -131,6 +160,8 @@ public class Patient {
             this.language = patientObj.getLanguage();
             this.telephone = patientObj.getTelephone();
             this.gender = patientObj.getGender();
+            this.medicalHistory = patientObj.getMedicalHistory();
+            this.toDo = patientObj.getToDo();
             return this;
         }
 
