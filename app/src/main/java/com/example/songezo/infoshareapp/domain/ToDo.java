@@ -6,9 +6,9 @@ package com.example.songezo.infoshareapp.domain;
 public class ToDo {
     private long id;
     private int taskNumber;
-    private long task;
+    private String task;
     private boolean done;
-    private long commentSection;
+    private String commentSection;
     //private TaskTable taskTable;
 
     public ToDo(Builder builderObj){
@@ -19,7 +19,7 @@ public class ToDo {
         commentSection = builderObj.commentSection;
     }
 
-    public ToDo(long id, int taskNumber, long task, boolean done, long commentSection) {
+    public ToDo(long id, int taskNumber, String task, boolean done, String commentSection) {
         this.id = id;
         this.taskNumber = taskNumber;
         this.task = task;
@@ -35,15 +35,15 @@ public class ToDo {
         return taskNumber;
     }
 
-    public long getTask() {
-        return task;
-    }
-
     public boolean getDone() {
         return done;
     }
 
-    public long getCommentSection() {
+    public String getTask() {
+        return task;
+    }
+
+    public String getCommentSection() {
         return commentSection;
     }
 
@@ -53,9 +53,9 @@ public class ToDo {
     public static class Builder{
         private long id;
         private int taskNumber;
-        private long task;
+        private String task;
         private boolean done;
-        private long commentSection;
+        private String commentSection;
 
         public Builder id(long id){
             this.id = id;
@@ -67,7 +67,7 @@ public class ToDo {
             return this;
         }
 
-        public Builder task(long task){
+        public Builder task(String task){
             this.task = task;
             return this;
         }
@@ -77,7 +77,7 @@ public class ToDo {
             return this;
         }
 
-        public Builder commentSection(long commentSection){
+        public Builder commentSection(String commentSection){
             this.commentSection = commentSection;
             return this;
         }
