@@ -7,35 +7,35 @@ package com.example.songezo.infoshareapp.domain;
 public class MainMenu {
 
     private Long id;
-    //private MyPatients myPatients;
+    private MyPatient myPatient;
     private ShareStories stories;
     private MessagingContacts messagingContacts;
     private SeeStories seeStories;
-    //private Extras extras
+    private Extras extras;
 
 
     public MainMenu(Builder builderObjt) {
         id = builderObjt.id;
-        //myPatients = builderObjt.myPatients;
+        myPatient = builderObjt.myPatient;
         stories = builderObjt.stories;
         messagingContacts = builderObjt.messagingContacts;
         seeStories = builderObjt.seeStories;
-        // extras = builderObjt.extras;
+        extras = builderObjt.extras;
     }
 
 
-      public MainMenu(/*MyPatients myPatients,*/ ShareStories stories, MessagingContacts messagingContacts,SeeStories seeStories,/*Extras extras,*/ Long id){
+      public MainMenu(MyPatient myPatient, ShareStories stories, MessagingContacts messagingContacts,SeeStories seeStories,Extras extras, Long id){
          this.id = id;
-         //this.myPatients = myPatients;
+         this.myPatient = myPatient;
          this.stories = stories;
          this.messagingContacts = messagingContacts;
          this.seeStories = seeStories;
-         //this.extras = extras;
+         this.extras = extras;
        }
 
-    /*public MyPatients getMyPatients() {
-        return myPatients;
-    }*/
+    public MyPatient getMyPatient() {
+        return myPatient;
+    }
 
     public ShareStories getStories () {
         return stories;
@@ -49,9 +49,9 @@ public class MainMenu {
         return seeStories;
     }
 
-    /*public Extras getExtras() {
+    public Extras getExtras() {
         return extras;
-    }*/
+    }
 
 
     public Long getId() {
@@ -61,17 +61,17 @@ public class MainMenu {
 
     public static class Builder{
         private Long id;
-        //private MyPatients myPatients;
+        private MyPatient myPatient;
         private ShareStories stories;
         private MessagingContacts messagingContacts;
         private SeeStories seeStories;
-        //private Extras extras
+        private Extras extras;
 
 
-        /*public Builder myPatients(MyPatients myPatients){
-            this.myPatients = myPatients;
+        public Builder myPatient(MyPatient myPatient){
+            this.myPatient = myPatient;
             return this;
-        }*/
+        }
 
         public Builder stories(ShareStories stories){
             this.stories = stories;
@@ -93,18 +93,18 @@ public class MainMenu {
             return this;
         }
 
-        /*public Builder extras(Extras extras){
+        public Builder extras(Extras extras){
             this.extras = extras;
             return this;
-        }*/
+        }
 
         public Builder copyObj(MainMenu mainMenuObj){
             this.id = mainMenuObj.getId();
-            //this.myPatients = myPatients.getMyPatients();
+            this.myPatient = mainMenuObj.getMyPatient();
             this.stories = mainMenuObj.getStories();
             this.messagingContacts = mainMenuObj.getMessagingContacts();
             this.seeStories = mainMenuObj.getSeeStories();
-            //this.extras = mainMenuObj.getExtras();
+            this.extras = mainMenuObj.getExtras();
             return this;
         }
 
