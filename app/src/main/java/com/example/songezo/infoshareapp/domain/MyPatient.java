@@ -10,16 +10,18 @@ public class MyPatient {
     private long id;
     private Date pDate;
     private Time time;
-    private long location;
+    private String location;
+    private String name;
 
     public MyPatient(Builder builderObj){
         id = builderObj.id;
         pDate = builderObj.pDate;
         time = builderObj.time;
         location = builderObj.location;
+        name = builderObj.name;
     }
 
-    public MyPatient(long id, Date pDate, Time time, long location) {
+    public MyPatient(long id, Date pDate, Time time, String location, String name) {
         this.id = id;
         this.pDate = pDate;
         this.time = time;
@@ -38,15 +40,20 @@ public class MyPatient {
         return time;
     }
 
-    public long getLocation() {
+    public String getLocation() {
         return location;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public static class Builder{
         private long id;
         private Date pDate;
         private Time time;
-        private long location;
+        private String location;
+        private String name;
 
         public Builder id(long id){
             this.id = id;
@@ -63,8 +70,13 @@ public class MyPatient {
             return this;
         }
 
-        public Builder location(long location){
+        public Builder location(String location){
             this.location = location;
+            return this;
+        }
+
+        public Builder name(String name){
+            this.name = name;
             return this;
         }
 
@@ -73,6 +85,7 @@ public class MyPatient {
             this.pDate = myPatientObj.getpDate();
             this.time = myPatientObj.getTime();
             this.location = myPatientObj.getLocation();
+            this.name = myPatientObj.getName();
             return this;
         }
 
