@@ -7,11 +7,11 @@ import java.util.Date;
  */
 public class Patient {
     private long id;
-    private long name;
-    private long address;
-    private long reasonForVisit;
+    private String name;
+    private String address;
+    private String reasonForVisit;
     private Date dateOfBirth;
-    private long language;
+    private String language;
     private int telephone;
     private boolean gender;
     private MedicalHistory medicalHistory;
@@ -33,7 +33,7 @@ public class Patient {
         toDo = builderObj.toDo;
     }
 
-    public Patient(long id, long name, long address, long reasonForVisit, Date dateOfBirth, long language, int telephone, boolean gender, MedicalHistory medicalHistory, ToDo toDo) {
+    public Patient(long id, String name, String address, String reasonForVisit, Date dateOfBirth, String language, int telephone, boolean gender, MedicalHistory medicalHistory, ToDo toDo) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -50,25 +50,30 @@ public class Patient {
         return id;
     }
 
-    public long getName() {
+    public String getName() {
         return name;
     }
 
-    public long getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public long getReasonForVisit() {
+    public String getReasonForVisit() {
         return reasonForVisit;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public boolean isGender() {
+        return gender;
     }
 
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public long getLanguage() {
-        return language;
-    }
 
     public int getTelephone() {
         return telephone;
@@ -91,11 +96,11 @@ public class Patient {
 
     public static class Builder{
         private long id;
-        private long name;
-        private long address;
-        private long reasonForVisit;
+        private String name;
+        private String address;
+        private String reasonForVisit;
         private Date dateOfBirth;
-        private long language;
+        private String language;
         private int telephone;
         private boolean gender;
         private MedicalHistory medicalHistory;
@@ -106,17 +111,17 @@ public class Patient {
             return this;
         }
 
-        public Builder name(long name){
+        public Builder name(String name){
             this.name = name;
             return this;
         }
 
-        public Builder address(long address){
+        public Builder address(String address){
             this.address = address;
             return this;
         }
 
-        public Builder reasonForVisit(long reasonForVisit){
+        public Builder reasonForVisit(String reasonForVisit){
             this.reasonForVisit = reasonForVisit;
             return this;
         }
@@ -126,7 +131,7 @@ public class Patient {
             return this;
         }
 
-        public Builder language(long language){
+        public Builder language(String language){
             this.language = language;
             return this;
         }
