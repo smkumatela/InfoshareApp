@@ -23,7 +23,7 @@ public class MedicalHistoryFactory {
         return historyFactory;
     }
 
-    public static MedicalHistory createMedicalHistory(Map<String, Long> values, Date date, Long id){
+    public static MedicalHistory createMedicalHistory(Map<String, String> values, Date date, Long id){
         MedicalHistory medicalHistory1 = new MedicalHistory.Builder()
                                 .comments(values.get("comments about Medical History"))
                                 .task(values.get("tasks to be done"))

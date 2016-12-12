@@ -10,8 +10,8 @@ import java.util.Locale;
 public class MedicalHistory {
     private long id;
     private Date date;
-    private long task;
-    private long comments;
+    private String task;
+    private String comments;
 
     public MedicalHistory(Builder builderObjt){
         id = builderObjt.id;
@@ -20,7 +20,7 @@ public class MedicalHistory {
         comments = builderObjt.comments;
     }
 
-    public MedicalHistory(Date date, long task, long comments, long id){
+    public MedicalHistory(Date date, String task, String comments, long id){
         this.id = id;
         this.date = date;
         this.task = task;
@@ -31,11 +31,11 @@ public class MedicalHistory {
         return date;
     }
 
-    public long getTask() {
+    public String getTask() {
         return task;
     }
 
-    public long getComments() {
+    public String getComments() {
         return comments;
     }
 
@@ -49,20 +49,20 @@ public class MedicalHistory {
     public static class Builder{
         private long id;
         private Date date;
-        private long task;
-        private long comments;
+        private String task;
+        private String comments;
 
         public Builder date(Date date){
             this.date = date;
             return this;
         }
 
-        public Builder task(long task){
+        public Builder task(String task){
             this.task = task;
             return this;
         }
 
-        public Builder comments(long comments){
+        public Builder comments(String comments){
             this.comments = comments;
             return this;
         }
