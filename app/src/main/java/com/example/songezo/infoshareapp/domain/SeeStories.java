@@ -6,19 +6,19 @@ package com.example.songezo.infoshareapp.domain;
 
 public class SeeStories {
     private Long id;
-    private ShareStories stories;
+    private String stories;
 
     public SeeStories(Builder builderObjt){
         id = builderObjt.id;
         stories = builderObjt.stories;
     }
 
-    public SeeStories(ShareStories stories, Long id){
+    public SeeStories(String stories, Long id){
         this.id = id;
         this.stories = stories;
     }
 
-    public ShareStories getStories() {
+    public String getStories() {
         return stories;
     }
 
@@ -29,9 +29,9 @@ public class SeeStories {
 
     public static class Builder{
         private Long id;
-        private ShareStories stories;
+        private String stories;
 
-        public Builder stories(ShareStories stories){
+        public Builder stories(String stories){
             this.stories = stories;
             return this;
         }

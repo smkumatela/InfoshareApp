@@ -7,8 +7,8 @@ package com.example.songezo.infoshareapp.domain;
 public class ShareStories {
 
       private Long id;
-      private Long share;
-      private Long clear;
+      private String share;
+      private String clear;
 
     public ShareStories(Builder builderObjt){
         id = builderObjt.id;
@@ -16,17 +16,17 @@ public class ShareStories {
         clear = builderObjt.clear;
     }
 
-    public ShareStories(Long share, Long clear, Long id){
+    public ShareStories(String share, String clear, Long id){
         this.id = id;
         this.share = share;
         this.clear = clear;
     }
 
-    public Long getShare() {
+    public String getShare() {
         return share;
     }
 
-    public Long getClear() {
+    public String getClear() {
         return clear;
     }
 
@@ -38,15 +38,15 @@ public class ShareStories {
 
     public static class Builder{
         private Long id;
-        private Long share;
-        private Long clear;
+        private String share;
+        private String clear;
 
-        public Builder share(Long share){
+        public Builder share(String share){
             this.share = share;
             return this;
         }
 
-        public Builder clear(Long clear){
+        public Builder clear(String clear){
             this.clear = clear;
             return this;
         }

@@ -23,7 +23,7 @@ public class SeeStoriesFactory {
         return seeStoriesFactory;
     }
 
-    public static SeeStories createSeeStoriesFactory(ShareStories shareStories, Long id){
+    public static SeeStories createSeeStoriesFactory(String shareStories, Long id){
         SeeStories seeStories1 = new SeeStories.Builder()
                 .stories(shareStories)
                 .id(id)

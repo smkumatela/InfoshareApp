@@ -6,8 +6,8 @@ package com.example.songezo.infoshareapp.domain;
 
 public class MessagingContacts {
     private Long id;
-    private Caregiver caregiver;
-    private Organisation organisation;
+    private String caregiver;
+    private String organisation;
 
     public MessagingContacts(Builder builderObjt){
         id = builderObjt.id;
@@ -15,17 +15,17 @@ public class MessagingContacts {
         organisation = builderObjt.organisation;
     }
 
-    public MessagingContacts(Caregiver caregiver, Organisation organisation, Long id){
+    public MessagingContacts(String caregiver, String organisation, Long id){
         this.id = id;
         this.caregiver = caregiver;
         this.organisation = organisation;
     }
 
-    public Caregiver getCaregiver() {
+    public String getCaregiver() {
         return caregiver;
     }
 
-    public Organisation getOrganisation() {
+    public String getOrganisation() {
         return organisation;
     }
 
@@ -35,15 +35,15 @@ public class MessagingContacts {
 
     public static class Builder{
         private Long id;
-        private Caregiver caregiver;
-        private Organisation organisation;
+        private String caregiver;
+        private String organisation;
 
-        public Builder caregiver(Caregiver careGiver){
+        public Builder caregiver(String careGiver){
             this.caregiver = caregiver;
             return this;
         }
 
-        public Builder organisation(Organisation organisation){
+        public Builder organisation(String organisation){
             this.organisation = organisation;
             return this;
         }

@@ -28,7 +28,7 @@ public class MainMenuFactory {
         return mainMenuFactory;
     }
 
-    public static MainMenu createMainMenuFactory(MyPatient myPatient, ShareStories shareStories, MessagingContacts messagingContacts, SeeStories seeStories, Extras extras, Long id){
+    public static MainMenu createMainMenuFactory(String myPatient, String shareStories, String messagingContacts, String seeStories, String extras, Long id){
         MainMenu mainMenu1 = new MainMenu.Builder()
                 .myPatient(myPatient)
                 .stories(shareStories)

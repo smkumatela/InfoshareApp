@@ -24,7 +24,7 @@ public class MessagingContactsFactory {
         return messagingContactsFactory;
     }
 
-    public static MessagingContacts createMessagingContactsFactory(Caregiver caregiver, Organisation organisation, Long id){
+    public static MessagingContacts createMessagingContactsFactory(String caregiver, String organisation, Long id){
         MessagingContacts messagingContacts1 = new MessagingContacts.Builder()
                 .caregiver(caregiver)
                 .organisation(organisation)
