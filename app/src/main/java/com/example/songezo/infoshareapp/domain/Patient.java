@@ -14,11 +14,8 @@ public class Patient {
     private String language;
     private int telephone;
     private boolean gender;
-    private MedicalHistory medicalHistory;
+    private String medicalHistory;
     private ToDo toDo;
-    //private PatientProfileTable patientProfile;
-    //private GenerateReport generateReport;
-    //private Diagnosis diagnosis;
 
     public Patient(Builder builderObj){
         id = builderObj.id;
@@ -33,7 +30,7 @@ public class Patient {
         toDo = builderObj.toDo;
     }
 
-    public Patient(long id, String name, String address, String reasonForVisit, Date dateOfBirth, String language, int telephone, boolean gender, MedicalHistory medicalHistory, ToDo toDo) {
+    public Patient(long id, String name, String address, String reasonForVisit, Date dateOfBirth, String language, int telephone, boolean gender, String medicalHistory, ToDo toDo) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -83,7 +80,7 @@ public class Patient {
         return gender;
     }
 
-    public MedicalHistory getMedicalHistory() {
+    public String getMedicalHistory() {
         return medicalHistory;
     }
 
@@ -103,7 +100,7 @@ public class Patient {
         private String language;
         private int telephone;
         private boolean gender;
-        private MedicalHistory medicalHistory;
+        private String medicalHistory;
         private ToDo toDo;
 
         public Builder id(long id){
@@ -146,7 +143,7 @@ public class Patient {
             return this;
         }
 
-        public Builder medicalHistory(MedicalHistory medicalHistory){
+        public Builder medicalHistory(String medicalHistory){
             this.medicalHistory = medicalHistory;
             return this;
         }
