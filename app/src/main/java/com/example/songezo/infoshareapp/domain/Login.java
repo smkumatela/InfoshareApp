@@ -7,8 +7,8 @@ package com.example.songezo.infoshareapp.domain;
 
 public class Login {
     private Long id;
-    private Long username;
-    private Long password;
+    private String username;
+    private String password;
 
 
     public Login(Builder builderObjt){
@@ -17,18 +17,18 @@ public class Login {
         password = builderObjt.password;
     }
 
-    public Login(Long username, Long password, Long id){
+    public Login(String username, String password, Long id){
         this.id = id;
         this.username = username;
         this.password = password;
     }
 
 
-    public Long getUsername() {
+    public String getUsername() {
         return username;
     }
 
-    public Long getPassword() {
+    public String getPassword() {
         return password;
     }
 
@@ -39,15 +39,15 @@ public class Login {
 
     public static class Builder{
         private Long id;
-        private Long username;
-        private Long password;
+        private String username;
+        private String password;
 
-        public Builder username(Long username){
+        public Builder username(String username){
             this.username = username;
             return this;
         }
 
-        public Builder password(Long password){
+        public Builder password(String password){
             this.password = password;
             return this;
         }

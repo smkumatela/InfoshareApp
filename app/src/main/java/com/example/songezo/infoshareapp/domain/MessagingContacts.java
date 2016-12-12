@@ -6,24 +6,24 @@ package com.example.songezo.infoshareapp.domain;
 
 public class MessagingContacts {
     private Long id;
-    //private CareGivers careGivers;
+    private Caregiver caregiver;
     private Organisation organisation;
 
     public MessagingContacts(Builder builderObjt){
         id = builderObjt.id;
-       // careGivers = builderObjt.careGivers;
+        caregiver = builderObjt.caregiver;
         organisation = builderObjt.organisation;
     }
 
-    public MessagingContacts(/*CareGivers careGivers,*/ Organisation organisation, Long id){
+    public MessagingContacts(Caregiver caregiver, Organisation organisation, Long id){
         this.id = id;
-        //this.careGivers = careGivers;
+        this.caregiver = caregiver;
         this.organisation = organisation;
     }
 
-    /*public CareGivers getCareGivers() {
-        return careGivers;
-    }*/
+    public Caregiver getCaregiver() {
+        return caregiver;
+    }
 
     public Organisation getOrganisation() {
         return organisation;
@@ -35,13 +35,13 @@ public class MessagingContacts {
 
     public static class Builder{
         private Long id;
-        //private CareGivers careGivers;
+        private Caregiver caregiver;
         private Organisation organisation;
 
-        /*public Builder careGivers(CareGivers careGivers){
-            this.careGivers = careGivers;
+        public Builder caregiver(Caregiver careGiver){
+            this.caregiver = caregiver;
             return this;
-        }*/
+        }
 
         public Builder organisation(Organisation organisation){
             this.organisation = organisation;
@@ -55,7 +55,7 @@ public class MessagingContacts {
 
         public Builder copyObj(MessagingContacts messagingContactsObj){
             this.id = messagingContactsObj.getId();
-            //this.careGivers = messagingContactsObj.getCareGivers();
+            this.caregiver = messagingContactsObj.getCaregiver();
             this.organisation = messagingContactsObj.getOrganisation();
             return this;
         }

@@ -6,22 +6,15 @@ package com.example.songezo.infoshareapp.domain;
 
 public class Organisation {
     private Long id;
-    //private ContactList contactList;
-
 
     public Organisation(Builder builderObjt){
         id = builderObjt.id;
-       // contactList = builderObjt.contactList;
     }
 
-    public Organisation(/*Long contactList,*/ Long id){
+    public Organisation(Long id){
         this.id = id;
-        //this.contactList = contactList;
     }
 
-    /*public ContactList getContactList() {
-        return contactList;
-    }*/
 
     public Long getId() {
         return id;
@@ -30,12 +23,6 @@ public class Organisation {
 
     public static class Builder{
         private Long id;
-        //private ContactList contactList;
-
-        /*public Builder contactList(ContactList contactList){
-            this.contactList = contactList;
-            return this;
-        }*/
 
         public Builder id(Long id){
             this.id = id;
@@ -44,7 +31,6 @@ public class Organisation {
 
         public Builder copyObj(Organisation organisationObj){
             this.id = organisationObj.getId();
-            //this.contactList = organisationObj.getContactList();
             return this;
         }
 

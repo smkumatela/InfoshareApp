@@ -7,12 +7,8 @@ package com.example.songezo.infoshareapp.domain;
 public class ShareStories {
 
       private Long id;
-    //private TextBox textBox;
-    //private UploadAFile uploadafile;
       private Long share;
       private Long clear;
-
-
 
     public ShareStories(Builder builderObjt){
         id = builderObjt.id;
