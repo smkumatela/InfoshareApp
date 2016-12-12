@@ -56,7 +56,8 @@ public class MedicalHistoryRepositoryImpl extends SQLiteOpenHelper implements Me
                         COLUMN_ID,
                         COLUMN_DATE,
                         COLUMN_COMMENTS,
-                        COLUMN_TASK},
+                        COLUMN_TASK
+                },
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(aLong)},
                 null,
@@ -64,11 +65,11 @@ public class MedicalHistoryRepositoryImpl extends SQLiteOpenHelper implements Me
                 null);
         if (cursor.moveToFirst()){
             final MedicalHistory medicalHistory = new MedicalHistory.Builder()
-                                                .id(cursor.getLong(cursor.getColumnIndex(COLUMN_ID)))
-                                                .task(cursor.getString(cursor.getColumnIndex(COLUMN_TASK)))
-                                                .comments(cursor.getString(cursor.getColumnIndex(COLUMN_COMMENTS)))
+                    .id(cursor.getLong(cursor.getColumnIndex(COLUMN_ID)))
+                    .task(cursor.getString(cursor.getColumnIndex(COLUMN_TASK)))
+                    .comments(cursor.getString(cursor.getColumnIndex(COLUMN_COMMENTS)))
                     .date(AppUtil.getDate(cursor.getString(cursor.getColumnIndex(COLUMN_DATE))))
-                                                .build();
+                    .build();
             return medicalHistory;
         } else {
             return null;

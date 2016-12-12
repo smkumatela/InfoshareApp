@@ -15,7 +15,7 @@ public class Patient {
     private int telephone;
     private boolean gender;
     private String medicalHistory;
-    private ToDo toDo;
+    private String toDo;
 
     public Patient(Builder builderObj){
         id = builderObj.id;
@@ -30,7 +30,7 @@ public class Patient {
         toDo = builderObj.toDo;
     }
 
-    public Patient(long id, String name, String address, String reasonForVisit, Date dateOfBirth, String language, int telephone, boolean gender, String medicalHistory, ToDo toDo) {
+    public Patient(long id, String name, String address, String reasonForVisit, Date dateOfBirth, String language, int telephone, boolean gender, String medicalHistory, String toDo) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -84,7 +84,7 @@ public class Patient {
         return medicalHistory;
     }
 
-    public ToDo getToDo() {
+    public String getToDo() {
         return toDo;
     }
 
@@ -101,7 +101,7 @@ public class Patient {
         private int telephone;
         private boolean gender;
         private String medicalHistory;
-        private ToDo toDo;
+        private String toDo;
 
         public Builder id(long id){
             this.id = id;
@@ -148,7 +148,7 @@ public class Patient {
             return this;
         }
 
-        public Builder toDo(ToDo toDo){
+        public Builder toDo(String toDo){
             this.toDo = toDo;
             return this;
         }
