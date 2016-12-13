@@ -27,7 +27,7 @@ public class MedicalHistoryFactory {
         MedicalHistory medicalHistory1 = new MedicalHistory.Builder()
                                 .comments(values.get("comments about Medical History"))
                                 .task(values.get("tasks to be done"))
-                                .id(12345L)
+                                .id(id)
                                 .date(date)
                                 .build();
         return medicalHistory1;
