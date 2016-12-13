@@ -1,10 +1,9 @@
-package com.example.songezo.infoshareapp.patient;
+package com.example.songezo.infoshareapp.repository.patient;
 
 import android.test.AndroidTestCase;
 
 import com.example.songezo.infoshareapp.domain.Patient;
 import com.example.songezo.infoshareapp.repository.patient.Impl.PatientRepositoryImpl;
-import com.example.songezo.infoshareapp.repository.patient.PatientRepository;
 
 import junit.framework.Assert;
 

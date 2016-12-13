@@ -37,7 +37,7 @@ public class MyPatientRepositoryImpl extends SQLiteOpenHelper implements MyPatie
             + COLUMN_NAME + "TEXT NOT NULL, "
             + COLUMN_LOCATION + "TEXT NOT NULL );";
 
-    public MyPatientRepositoryImpl(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public MyPatientRepositoryImpl(Context context) {
         super(context, name, factory, version);
     }
 

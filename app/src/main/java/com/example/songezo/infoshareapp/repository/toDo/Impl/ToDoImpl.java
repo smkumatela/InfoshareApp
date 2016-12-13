@@ -36,7 +36,7 @@ public class ToDoImpl extends SQLiteOpenHelper implements ToDoRepository {
             + COLUMN_DONE + "TEXT NOT NULL, "
             + COLUMN_COMMENT_SECTION + "TEXT NOT NULL );";
 
-    public ToDoImpl(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public ToDoImpl(Context context) {
         super(context, name, factory, version);
     }
 

@@ -1,10 +1,9 @@
-package com.example.songezo.infoshareapp.medicalHistory;
+package com.example.songezo.infoshareapp.repository.medicalHistory;
 
 import android.test.AndroidTestCase;
 
 import com.example.songezo.infoshareapp.domain.MedicalHistory;
 import com.example.songezo.infoshareapp.repository.medicalHistory.Impl.MedicalHistoryRepositoryImpl;
-import com.example.songezo.infoshareapp.repository.medicalHistory.MedicalHistoryRepository;
 
 import junit.framework.Assert;
 
