@@ -60,7 +60,9 @@ public class MedicalHistoryServiceTest extends AndroidTestCase {
             id = 12350L;
             MedicalHistory medicalHistoryEntity = MedicalHistoryFactory.createMedicalHistory(values, date, id);
             MedicalHistory newMedical = medicalHistoryServiceImpl.saveMedicalHistory(medicalHistoryEntity);
-            Assert.assertNotNull(newMedical);
+            Assert.assertNotNull(TAG + " CREATE", newMedical);
         }
-    }
+
+
+}
 
