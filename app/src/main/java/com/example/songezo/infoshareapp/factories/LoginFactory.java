@@ -24,10 +24,10 @@ public class LoginFactory {
         return loginFactory;
     }
 
-    public static Login createLoginFactory(Map<String, String> values, Long id){
+    public static Login createLoginFactory(String username, String password, Long id){
         Login login1 = new Login.Builder()
-                .username(values.get("Ash"))
-                .password(values.get("12345"))
+                .username(username)
+                .password(password)
                 .id(321L)
                 .build();
 
