@@ -6,8 +6,8 @@ package com.example.songezo.infoshareapp.domain;
 public class AudioVisuals {
 
     private Long id;
-    private Audio aud;
-    private Video vid;
+    private String aud;
+    private String vid;
 
 
     public AudioVisuals(Builder builderObjt) {
@@ -17,7 +17,7 @@ public class AudioVisuals {
     }
 
 
-    public AudioVisuals( Audio aud, Video vid,Long id){
+    public AudioVisuals( String aud, String vid,Long id){
         this.id = id;
         this.aud = aud;
         this.vid = vid;
@@ -25,11 +25,11 @@ public class AudioVisuals {
 
 
 
-    public Audio getAudio () {
+    public String getAudio () {
         return aud;
     }
 
-    public Video getVideo() {
+    public String getVideo() {
         return vid;
     }
 
@@ -40,15 +40,15 @@ public class AudioVisuals {
 
     public static class Builder{
         private Long id;
-        private Audio aud;
-        private Video vid;
+        private String aud;
+        private String vid;
 
-        public Builder aud(Audio aud){
+        public Builder aud(String aud){
             this.aud = aud;
             return this;
         }
 
-        public Builder vid(Video vid){
+        public Builder vid(String vid){
             this.vid = vid;
             return this;
         }

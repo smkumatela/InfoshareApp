@@ -2,6 +2,8 @@ package com.example.songezo.infoshareapp.factories;
 
 import com.example.songezo.infoshareapp.domain.Audio;
 
+import java.util.Map;
+
 /**
  * Created by VERNON on 2016/12/10.
  */
@@ -21,9 +23,10 @@ public class AudioFactory {
         return audioFactory;
     }
 
-    public static Audio createAudio(Long id){
+    public static Audio createAudio(String audio, Long id){
         Audio about1 = new Audio.Builder()
                 .id(4345L)
+                .audioName("Track")
                 .build();
         return about1;
     }
