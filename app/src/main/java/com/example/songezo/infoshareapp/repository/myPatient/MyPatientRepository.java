@@ -4,7 +4,7 @@ import com.example.songezo.infoshareapp.domain.MyPatient;
 import com.example.songezo.infoshareapp.repository.Repository;
 
 /**
- * Created by Songezo on 2016-12-12.
+ * Created by Songezo on 2016-12-13.
  */
 public interface MyPatientRepository extends Repository<MyPatient, Long> {
 }

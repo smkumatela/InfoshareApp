@@ -17,7 +17,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by Songezo on 2016-12-12.
+ * Created by Songezo on 2016-12-13.
  */
 public class MyPatientRepositoryImpl extends SQLiteOpenHelper implements MyPatientRepository {
 
@@ -167,4 +167,6 @@ public class MyPatientRepositoryImpl extends SQLiteOpenHelper implements MyPatie
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
+
+
 }
