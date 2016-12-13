@@ -6,8 +6,10 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
+import com.example.songezo.infoshareapp.conf.util.App;
 import com.example.songezo.infoshareapp.domain.ToDo;
 import com.example.songezo.infoshareapp.factories.TodoFactory;
+import com.example.songezo.infoshareapp.repository.toDo.Impl.ToDoRepositoryImpl;
 import com.example.songezo.infoshareapp.repository.toDo.ToDoRepository;
 import com.example.songezo.infoshareapp.services.toDo.ToDoService;
 
@@ -29,6 +31,10 @@ public class ToDoServiceImpl extends Service implements ToDoService {
 
 
     private static ToDoServiceImpl service = null;
+
+    public ToDoServiceImpl(){
+        repository = new ToDoRepositoryImpl(App.getAppContext());
+    }
 
     public static ToDoServiceImpl getInstance(){
         if (service == null)

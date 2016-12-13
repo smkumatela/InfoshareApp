@@ -3,7 +3,7 @@ package com.example.songezo.infoshareapp.repository.toDo;
 import android.test.AndroidTestCase;
 
 import com.example.songezo.infoshareapp.domain.ToDo;
-import com.example.songezo.infoshareapp.repository.toDo.Impl.ToDoImpl;
+import com.example.songezo.infoshareapp.repository.toDo.Impl.ToDoRepositoryImpl;
 
 import junit.framework.Assert;
 
@@ -18,7 +18,7 @@ public class ToDoRepositoryTest extends AndroidTestCase {
     private Long id;
 
     public void testCreateReadUpdateDelete() throws Exception {
-        ToDoRepository repository = new ToDoImpl(this.getContext());
+        ToDoRepository repository = new ToDoRepositoryImpl(this.getContext());
     /*CREATE*/
         ToDo createEntity = new ToDo.Builder()
                 .build();

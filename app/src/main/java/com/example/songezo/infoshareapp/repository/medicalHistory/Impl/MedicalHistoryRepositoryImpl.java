@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.example.songezo.infoshareapp.conf.databases.DBConstants;
 import com.example.songezo.infoshareapp.conf.util.AppUtil;
 import com.example.songezo.infoshareapp.domain.MedicalHistory;
 import com.example.songezo.infoshareapp.repository.medicalHistory.MedicalHistoryRepository;
@@ -36,7 +37,7 @@ public class MedicalHistoryRepositoryImpl extends SQLiteOpenHelper implements Me
             + COLUMN_TASK + "TEXT NOT NULL );";
 
     public MedicalHistoryRepositoryImpl(Context context) {
-        super(context, name, factory, version);
+        super(context, DBConstants.DATABASE_NAME, null, DBConstants.DATABASE_VERSION);
     }
 
     public void open() throws SQLException {

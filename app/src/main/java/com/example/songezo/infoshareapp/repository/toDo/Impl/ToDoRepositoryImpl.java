@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.example.songezo.infoshareapp.conf.databases.DBConstants;
 import com.example.songezo.infoshareapp.domain.ToDo;
 import com.example.songezo.infoshareapp.repository.toDo.ToDoRepository;
 
@@ -17,7 +18,7 @@ import java.util.Set;
 /**
  * Created by Songezo on 2016-12-12.
  */
-public class ToDoImpl extends SQLiteOpenHelper implements ToDoRepository {
+public class ToDoRepositoryImpl extends SQLiteOpenHelper implements ToDoRepository {
 
     public static final String TABLE_NAME = "my_Patient";
     private SQLiteDatabase db;
@@ -36,8 +37,8 @@ public class ToDoImpl extends SQLiteOpenHelper implements ToDoRepository {
             + COLUMN_DONE + "TEXT NOT NULL, "
             + COLUMN_COMMENT_SECTION + "TEXT NOT NULL );";
 
-    public ToDoImpl(Context context) {
-        super(context, name, factory, version);
+    public ToDoRepositoryImpl(Context context) {
+        super(context, DBConstants.DATABASE_NAME, null, DBConstants.DATABASE_VERSION);
     }
 
     public void open() throws SQLException {

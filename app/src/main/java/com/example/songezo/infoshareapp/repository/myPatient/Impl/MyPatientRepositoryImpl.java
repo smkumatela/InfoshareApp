@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.example.songezo.infoshareapp.conf.databases.DBConstants;
 import com.example.songezo.infoshareapp.conf.util.AppUtil;
 import com.example.songezo.infoshareapp.domain.MyPatient;
 import com.example.songezo.infoshareapp.repository.myPatient.MyPatientRepository;
@@ -38,7 +39,7 @@ public class MyPatientRepositoryImpl extends SQLiteOpenHelper implements MyPatie
             + COLUMN_LOCATION + "TEXT NOT NULL );";
 
     public MyPatientRepositoryImpl(Context context) {
-        super(context, name, factory, version);
+        super(context, DBConstants.DATABASE_NAME, null, DBConstants.DATABASE_VERSION);
     }
 
     public void open() throws SQLException {
