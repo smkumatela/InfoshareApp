@@ -21,9 +21,10 @@ public class VideoFactory {
         return videoFactory;
     }
 
-    public static Video createVideo(Long id){
+    public static Video createVideo(Long id, String video){
         Video about1 = new Video.Builder()
                 .id(7345L)
+                .videoName("Video")
                 .build();
         return about1;
     }

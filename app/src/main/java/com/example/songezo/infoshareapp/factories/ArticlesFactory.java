@@ -24,7 +24,7 @@ public class ArticlesFactory {
         return articleFactory;
     }
 
-    public static Articles createArticle(Map<String, Long> values, Date date, Long id){
+    public static Articles createArticle(String category, String topic, Date date, Long id){
         Articles articles1 = new Articles.Builder()
                 .category("category data")
                 .topic("sharing information")

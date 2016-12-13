@@ -6,15 +6,18 @@ package com.example.songezo.infoshareapp.domain;
 public class About {
 
     private Long id;
+    private String aboutInfoshare;
 
 
     public About(Builder builderObjt){
         id = builderObjt.id;
+        aboutInfoshare = builderObjt.aboutInfoshare;
 
     }
 
-    public About( Long id){
+    public About( Long id, String aboutInfoshare){
         this.id = id;
+        this.aboutInfoshare = aboutInfoshare;
 
     }
 
@@ -23,10 +26,17 @@ public class About {
         return id;
     }
 
+    public String getAboutInfoshare() { return aboutInfoshare; }
+
 
     public static class Builder{
         private Long id;
+        private String aboutInfoshare;
 
+        public Builder aboutInfoshare(String aboutInfoshare){
+            this.aboutInfoshare = aboutInfoshare;
+            return this;
+        }
 
         public Builder id(Long id){
             this.id = id;
@@ -35,6 +45,7 @@ public class About {
 
         public Builder copyObj(About aboutObj){
             this.id = aboutObj.getId();
+            this.aboutInfoshare = aboutObj.getAboutInfoshare();
             return this;
         }
 

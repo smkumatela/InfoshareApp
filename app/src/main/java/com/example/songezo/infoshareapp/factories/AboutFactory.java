@@ -23,9 +23,10 @@ public class AboutFactory {
         return aboutFactory;
     }
 
-    public static About createAbout(Long id){
+    public static About createAbout(String aboutInfoshare, Long id){
         About about1 = new About.Builder()
                 .id(6345L)
+                .aboutInfoshare("Sharing information")
                 .build();
         return about1;
     }

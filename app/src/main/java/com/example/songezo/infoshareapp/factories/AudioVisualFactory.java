@@ -25,10 +25,10 @@ public class AudioVisualFactory {
         return audioVisualFactory;
     }
 
-    public static AudioVisuals createAudioVisuals(Long id, Audio audio,Video video){
+    public static AudioVisuals createAudioVisuals(String audio, String video, Long id){
         AudioVisuals audioVisuals1 = new AudioVisuals.Builder()
-                .aud(audio)
-                .vid(video)
+                .aud("Track")
+                .vid("Video")
                 .id(3345L)
                 .build();
         return audioVisuals1;
