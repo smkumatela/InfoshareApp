@@ -22,7 +22,7 @@ public class ShareStoriesFactory {
         return shareStoriesFactory;
     }
 
-    public static ShareStories createShareStoriesFactory(Long clear, Long share, Long id){
+    public static ShareStories createShareStoriesFactory(String clear, String share, Long id){
         ShareStories shareStories1 = new ShareStories.Builder()
                 .clear(clear)
                 .share(share)

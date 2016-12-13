@@ -7,11 +7,11 @@ package com.example.songezo.infoshareapp.domain;
 public class MainMenu {
 
     private Long id;
-    private MyPatient myPatient;
-    private ShareStories stories;
-    private MessagingContacts messagingContacts;
-    private SeeStories seeStories;
-    private Extras extras;
+    private String myPatient;
+    private String stories;
+    private String messagingContacts;
+    private String seeStories;
+    private String extras;
 
 
     public MainMenu(Builder builderObjt) {
@@ -24,7 +24,7 @@ public class MainMenu {
     }
 
 
-      public MainMenu(MyPatient myPatient, ShareStories stories, MessagingContacts messagingContacts,SeeStories seeStories,Extras extras, Long id){
+      public MainMenu(String myPatient, String stories, String messagingContacts,String seeStories,String extras, Long id){
          this.id = id;
          this.myPatient = myPatient;
          this.stories = stories;
@@ -33,23 +33,23 @@ public class MainMenu {
          this.extras = extras;
        }
 
-    public MyPatient getMyPatient() {
+    public String getMyPatient() {
         return myPatient;
     }
 
-    public ShareStories getStories () {
+    public String getStories () {
         return stories;
     }
 
-    public MessagingContacts getMessagingContacts() {
+    public String getMessagingContacts() {
         return messagingContacts;
     }
 
-    public SeeStories getSeeStories() {
+    public String getSeeStories() {
         return seeStories;
     }
 
-    public Extras getExtras() {
+    public String getExtras() {
         return extras;
     }
 
@@ -61,29 +61,29 @@ public class MainMenu {
 
     public static class Builder{
         private Long id;
-        private MyPatient myPatient;
-        private ShareStories stories;
-        private MessagingContacts messagingContacts;
-        private SeeStories seeStories;
-        private Extras extras;
+        private String myPatient;
+        private String stories;
+        private String messagingContacts;
+        private String seeStories;
+        private String extras;
 
 
-        public Builder myPatient(MyPatient myPatient){
+        public Builder myPatient(String myPatient){
             this.myPatient = myPatient;
             return this;
         }
 
-        public Builder stories(ShareStories stories){
+        public Builder stories(String stories){
             this.stories = stories;
             return this;
         }
 
-        public Builder messagingContacts(MessagingContacts messagingContacts){
+        public Builder messagingContacts(String messagingContacts){
             this.messagingContacts = messagingContacts;
             return this;
         }
 
-        public Builder seeStories(SeeStories seeStories){
+        public Builder seeStories(String seeStories){
             this.seeStories = seeStories;
             return this;
         }
@@ -93,7 +93,7 @@ public class MainMenu {
             return this;
         }
 
-        public Builder extras(Extras extras){
+        public Builder extras(String extras){
             this.extras = extras;
             return this;
         }
