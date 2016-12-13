@@ -26,7 +26,7 @@ public class PatientFactory {
         return patients;
     }
 
-    public static Patient createPatient(Map<String, String> values, Date dateOfBirth, boolean gender, ToDo toDo, MedicalHistory medicalHistory){
+    public static Patient createPatient(Map<String, String> values, Date dateOfBirth, boolean gender, String toDo, String medicalHistory){
         Patient patient1 = new Patient.Builder()
                             .address(values.get("residential address"))
                             .language(values.get("home Language"))

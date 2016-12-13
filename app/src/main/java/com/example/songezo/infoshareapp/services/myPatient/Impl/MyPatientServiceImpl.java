@@ -29,7 +29,7 @@ public class MyPatientServiceImpl extends Service implements MyPatientService {
         repository = new MyPatientRepositoryImpl(App.getAppContext());
     }
 
-    public MyPatientServiceImpl getInstance(){
+    public static MyPatientServiceImpl getInstance(){
         if (service == null)
             service = new MyPatientServiceImpl();
         return service;
