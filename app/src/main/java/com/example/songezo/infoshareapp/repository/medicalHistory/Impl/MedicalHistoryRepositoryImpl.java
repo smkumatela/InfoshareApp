@@ -35,7 +35,7 @@ public class MedicalHistoryRepositoryImpl extends SQLiteOpenHelper implements Me
             + COLUMN_COMMENTS + "TEXT NOT NULL, "
             + COLUMN_TASK + "TEXT NOT NULL );";
 
-    public MedicalHistoryRepositoryImpl(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public MedicalHistoryRepositoryImpl(Context context) {
         super(context, name, factory, version);
     }
 

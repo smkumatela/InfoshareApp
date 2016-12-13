@@ -47,7 +47,7 @@ public class PatientRepositoryImpl extends SQLiteOpenHelper implements PatientRe
             + COLUMN_MEDICALHISTORY + "TEXT NOT NULL, "
             + COLUMN_TODO + "TEXT NOT NULL );";
 
-    public PatientRepositoryImpl(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public PatientRepositoryImpl(Context context) {
         super(context, name, factory, version);
     }
 
