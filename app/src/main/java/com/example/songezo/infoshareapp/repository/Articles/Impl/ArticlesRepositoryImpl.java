@@ -21,7 +21,7 @@ import java.util.Set;
  */
 public class ArticlesRepositoryImpl extends SQLiteOpenHelper implements ArticlesRepository {
 
-    public static final String TABLE_NAME = "about";
+    public static final String TABLE_NAME = "articles";
     private SQLiteDatabase db;
 
     public static final String COLUMN_ID = "about_id";
