@@ -45,7 +45,7 @@ public class AboutRepositoryTest extends AndroidTestCase {
                 .build();
         repository.update(updateEntity);
         About newEntity = repository.findById(id);
-        Assert.assertEquals(TAG + " UPDATE ENTITY", "About ", newEntity.getAboutInfoshare());
+        Assert.assertEquals(TAG + " UPDATE ENTITY", "Infoshare", newEntity.getAboutInfoshare());
 
 
         /*

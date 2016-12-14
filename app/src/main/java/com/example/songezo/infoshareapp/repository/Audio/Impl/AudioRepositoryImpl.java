@@ -20,10 +20,10 @@ import java.util.Set;
  */
 public class AudioRepositoryImpl extends SQLiteOpenHelper implements AudioRepository {
 
-    public static final String TABLE_NAME = "login";
+    public static final String TABLE_NAME = "audio";
     private SQLiteDatabase db;
 
-    public static final String COLUMN_ID = "login_id";
+    public static final String COLUMN_ID = "audio_id";
     public static final String COLUMN_AUDIONAME = "audioName";
 
     // Database creation sql statement

@@ -20,7 +20,7 @@ import java.util.Set;
  */
 public class VideoRepositoryImpl extends SQLiteOpenHelper implements VideoRepository {
 
-    public static final String TABLE_NAME = "login";
+    public static final String TABLE_NAME = "video";
     private SQLiteDatabase db;
 
     public static final String COLUMN_ID = "login_id";

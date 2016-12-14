@@ -45,7 +45,7 @@ public class AudioRepositoryTest extends AndroidTestCase {
                 .build();
         repository.update(updateEntity);
         Audio newEntity = repository.findById(id);
-        Assert.assertEquals(TAG + " UPDATE ENTITY", "About ", newEntity.getAudioName());
+        Assert.assertEquals(TAG + " UPDATE ENTITY", "song", newEntity.getAudioName());
 
 
         /*

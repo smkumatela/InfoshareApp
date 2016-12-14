@@ -47,7 +47,7 @@ public class AudioVisualsRepositoryTest extends AndroidTestCase {
                 .build();
         repository.update(updateEntity);
         AudioVisuals newEntity = repository.findById(id);
-        Assert.assertEquals(TAG + " UPDATE ENTITY", "About ", newEntity.getVideo());
+        Assert.assertEquals(TAG + " UPDATE ENTITY", "aud and vid", newEntity.getVideo());
 
 
         /*

@@ -45,7 +45,7 @@ public class VideoRepositoryTest extends AndroidTestCase {
                 .build();
         repository.update(updateEntity);
         Video newEntity = repository.findById(id);
-        Assert.assertEquals(TAG + " UPDATE ENTITY", "About ", newEntity.getVideoName());
+        Assert.assertEquals(TAG + " UPDATE ENTITY", "clip", newEntity.getVideoName());
 
 
         /*

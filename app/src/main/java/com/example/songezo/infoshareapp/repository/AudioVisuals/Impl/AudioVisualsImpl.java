@@ -20,7 +20,7 @@ import java.util.Set;
  */
 public class AudioVisualsImpl extends SQLiteOpenHelper implements AudioVisualsRepository {
 
-    public static final String TABLE_NAME = "login";
+    public static final String TABLE_NAME = "audioVisuals";
     private SQLiteDatabase db;
 
     public static final String COLUMN_ID = "login_id";
