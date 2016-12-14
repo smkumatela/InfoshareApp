@@ -26,18 +26,18 @@ public class PatientFactory {
         return patients;
     }
 
-    public static Patient createPatient(Map<String, String> values, Date dateOfBirth, boolean gender, String toDo, String medicalHistory){
+    public static Patient createPatient(Map<String, String> values, Date dateOfBirth, boolean gender){
         Patient patient1 = new Patient.Builder()
-                            .address(values.get("residential address"))
-                            .language(values.get("home Language"))
-                            .name(values.get("first name"))
-                            .reasonForVisit(values.get("reason"))
-                            .date(dateOfBirth)
-                            .telephone(021-7658-897)
-                            .medicalHistory(medicalHistory)
-                            .toDo(toDo)
-                            .id(246810L)
-                            .build();
+                .address(values.get("residential address"))
+                .language(values.get("home Language"))
+                .name(values.get("first name"))
+                .reasonForVisit(values.get("reason"))
+                .date(dateOfBirth)
+                .telephone(021-7658-897)
+                .medicalHistory("medicalHistory")
+                .toDo("toDo")
+                .id(246810L)
+                .build();
         return patient1;
     }
 
