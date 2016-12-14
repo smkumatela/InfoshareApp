@@ -38,7 +38,7 @@ public class MessagingContacts {
         private String caregiver;
         private String organisation;
 
-        public Builder caregiver(String careGiver){
+        public Builder caregiver(String caregiver){
             this.caregiver = caregiver;
             return this;
         }
