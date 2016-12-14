@@ -24,3 +24,24 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
 }
+
+android {
+    // Default code...
+
+    repositories {
+        maven {
+            url 'https://repo.spring.io/libs-milestone'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+    }
+}
+dependencies {
+    // Default code...
+    compile 'org.springframework.android:spring-android-rest-template:2.0.0.M1'
+}
