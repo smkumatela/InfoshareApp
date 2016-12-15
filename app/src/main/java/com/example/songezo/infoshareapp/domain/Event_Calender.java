@@ -6,32 +6,33 @@ package com.example.songezo.infoshareapp.domain;
 
 public class Event_Calender {
     private Long id;
-    private Organisation organisation;
+    private String organization;
 
     public Event_Calender(Builder builderObjt){
         id = builderObjt.id;
-        organisation = builderObjt.organisation;
+        organization = builderObjt.organization;
     }
 
-    public Event_Calender(Organisation organisation, Long id){
+    public Event_Calender(String organization, Long id){
         this.id = id;
-        this.organisation = organisation;
+        this.organization = organization;
     }
 
-    public Organisation getOrganisation() {
-        return organisation;
+    public String getOrganization() {
+        return organization;
     }
 
     public Long getId() {
         return id;
     }
 
+
     public static class Builder{
         private Long id;
-        private Organisation organisation;
+        private String organization;
 
-        public Builder organisation(Organisation organisation){
-            this.organisation = organisation;
+        public Builder organization(String organization){
+            this.organization = organization;
             return this;
         }
 
@@ -42,7 +43,7 @@ public class Event_Calender {
 
         public Builder copyObj(Event_Calender event_CalenderObj){
             this.id = event_CalenderObj.getId();
-            this.organisation = event_CalenderObj.getOrganisation();
+            this.organization = event_CalenderObj.getOrganization();
             return this;
         }
 

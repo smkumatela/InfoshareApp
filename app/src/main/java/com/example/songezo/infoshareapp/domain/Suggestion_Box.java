@@ -6,22 +6,15 @@ package com.example.songezo.infoshareapp.domain;
 
 public class Suggestion_Box {
     private Long id;
-    //private Questionnaire questionnaire;
-
 
     public Suggestion_Box(Builder builderObjt){
         id = builderObjt.id;
-        // questionnaire = builderObjt.questionnaire;
     }
 
-    public Suggestion_Box(/*Long questionnaire,*/ Long id){
+    public Suggestion_Box(Long id){
         this.id = id;
-        //this.questionnaire = questionnaire;
     }
 
-                /*public questionnaire getQuestionnaire() {
-         return questionnaire;
-     }*/
 
     public Long getId() {
         return id;
@@ -30,12 +23,6 @@ public class Suggestion_Box {
 
     public static class Builder{
         private Long id;
-        //private Questionnaire questionnaire;
-
-                        /*public Builder questionnaire(Questionnaire questionnaire){
-             this.questionnaire = questionnaire;
-             return this;
-         }*/
 
         public Builder id(Long id){
             this.id = id;
@@ -44,7 +31,6 @@ public class Suggestion_Box {
 
         public Builder copyObj(Suggestion_Box suggestion_BoxObj){
             this.id = suggestion_BoxObj.getId();
-            //this.questionnaire = suggestion_BoxObj.getQuestionnaire();
             return this;
         }
 
@@ -52,4 +38,5 @@ public class Suggestion_Box {
             return new Suggestion_Box(this);
         }
     }
+
 }

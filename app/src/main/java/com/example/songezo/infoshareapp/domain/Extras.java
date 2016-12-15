@@ -6,95 +6,104 @@ package com.example.songezo.infoshareapp.domain;
 
 public class Extras {
     private Long id;
-    private Event_Calender event_Calender;
-    private Weather weather;
-    private Suggestion_Box suggestion_Box;
-    //private Audio_Visuals audio_Visuals;
-    //private About about;
+    private String event_Calender;
+    private String weather;
+    private String suggestion_Box;
+    private String audioVisuals;
+    private String about;
 
 
-    public Extras(Builder builderObjt){
+    public Extras(Builder builderObjt) {
         id = builderObjt.id;
         event_Calender = builderObjt.event_Calender;
         weather = builderObjt.weather;
         suggestion_Box = builderObjt.suggestion_Box;
-        //audio_Visuals = builderObjt.audio_Visuals;
-        //about = builderObjt.about;
+        audioVisuals = builderObjt.audioVisuals;
+        about = builderObjt.about;
     }
 
-    public Extras(Event_Calender event_Calender,Weather weather,Suggestion_Box suggestion_Box/*,Audio_Visuals audio_Visuals,About about*/,Long id){
+
+    public Extras(String event_Calender, String weather, String suggestion_Box,String audioVisuals,String about, Long id){
         this.id = id;
         this.event_Calender = event_Calender;
         this.weather = weather;
         this.suggestion_Box = suggestion_Box;
-        //this.audio_Visuals = audio_Visuals;
-        //this.about = about;
+        this.audioVisuals = audioVisuals;
+        this.about = about;
     }
-    public Event_Calender getEvent_Calender() {
+
+    public String getEvent_Calender() {
         return event_Calender;
     }
-    public Weather getWeather() {
-         return weather;
+
+    public String getWeather () {
+        return weather;
     }
-    public Suggestion_Box getSuggestion_Box() {
-         return suggestion_Box;
+
+    public String getSuggestion_Box() {
+        return suggestion_Box;
     }
-    /*public Audio_Visuals getAudio_Visuals() {
-         return audio_Visuals;
-    }*/
-    /*public About getAbout() {
-         return about;
-    }*/
+
+    public String getAudioVisuals() {
+        return audioVisuals;
+    }
+
+    public String getAbout() {
+        return about;
+    }
 
 
     public Long getId() {
         return id;
     }
 
+
     public static class Builder{
         private Long id;
-        private Weather weather;
-        private Event_Calender event_Calender;
-        private Suggestion_Box suggestion_Box;
-        //private Audio_Visuals audio_Visuals;
-        //private About about;
+        private String event_Calender;
+        private String weather;
+        private String suggestion_Box;
+        private String audioVisuals;
+        private String about;
 
 
-        public Builder event_Calender(Event_Calender event_Calender){
+        public Builder event_Calender(String event_Calender){
             this.event_Calender = event_Calender;
             return this;
         }
 
-        public Builder weather(Weather weather){
-             this.weather = weather;
-             return this;
-         }
-        public Builder suggestion_Box(Suggestion_Box suggestion_Box){
-             this.suggestion_Box = suggestion_Box;
-             return this;
-         }
-        /*public Builder audio_Visuals(Audio_Visuals audio_Visuals){
-             this.audio_Visuals = audio_Visuals;
-             return this;
-         }*/
-        /*public Builder about(About about){
-             this.about = about;
-             return this;
-         }*/
+        public Builder weather(String weather){
+            this.weather = weather;
+            return this;
+        }
+
+        public Builder suggestion_Box(String suggestion_Box){
+            this.suggestion_Box = suggestion_Box;
+            return this;
+        }
+
+        public Builder audioVisuals(String audioVisuals){
+            this.audioVisuals = audioVisuals;
+            return this;
+        }
 
         public Builder id(Long id){
             this.id = id;
             return this;
         }
 
+        public Builder about(String about){
+            this.about = about;
+            return this;
+        }
+
         public Builder copyObj(Extras extrasObj){
             this.id = extrasObj.getId();
-            this.weather = extrasObj.getWeather();
             this.event_Calender = extrasObj.getEvent_Calender();
+            this.weather = extrasObj.getWeather();
             this.suggestion_Box = extrasObj.getSuggestion_Box();
-           // this.audio_Visuals = extrasObj.getAudio_Visuals();
-           // this.about = extrasObj.getAbout();
-
+            this.audioVisuals = extrasObj.getAudioVisuals();
+            this.about = extrasObj.getAbout();
             return this;
         }
 
@@ -102,4 +111,5 @@ public class Extras {
             return new Extras(this);
         }
     }
+
 }
