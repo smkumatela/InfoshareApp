@@ -21,7 +21,7 @@ public class WeatherServiceImpl extends Service implements WeatherService {
 
     private WeatherRepository repository;
 
-    private final IBinder localBinder = new OrganisationServiceLocalBinder();
+    private final IBinder localBinder = new WeatherServiceLocalBinder();
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
@@ -40,7 +40,7 @@ public class WeatherServiceImpl extends Service implements WeatherService {
             service = new WeatherServiceImpl();
         return service;
     }
-    public class OrganisationServiceLocalBinder extends Binder {
+    public class WeatherServiceLocalBinder extends Binder {
         public WeatherServiceImpl getService() {
             return WeatherServiceImpl.this;
         }
